@@ -11,4 +11,5 @@ Syntax- HashMap<String, Integer> res = new HashMap<String, Integer>();
   - UNTREEIFY_THRESHOLD (6): If the tree shrinks to 6 nodes (due to removals or a resize event), it reverts back to a Linked List. Tree nodes take up roughly twice as much memory as standard nodes, so this prevents unnecessary memory bloat.
 - So to prevent inconsistency at the collisions the hashmap uses hashcode() first and then later at the node it actually checks if already existing keys are equal() to the new insertion.
 - These 2 step verificaition ensures that a hashmap is always having unique keys all the time. So a second map.put(A, B) actually returns old value B before overwriting it with C.
+- HashTables on other hand are very old concept and they are actually synchronised, which makes them slow but thread safe completely. To overcome this and maintain efficiency too modern java i.e. Java 8 intoduced the concept of concurrent hashmap, which is thread-safe.
   
